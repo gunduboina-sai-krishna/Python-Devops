@@ -13,5 +13,5 @@ print(a,b)
 
 # how to change the tuple and create the new_tuple
 sample_tuple = ('abc', 'def', 'ghi')
-new_tuple = ('xyz',) + sample_tuple[1:]
+new_tuple = ('xyz',) + sample_tuple[:]
 print(new_tuple)  
