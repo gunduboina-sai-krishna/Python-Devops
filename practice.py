@@ -33,7 +33,7 @@ def large_files():
         if os.path.isfile(file_path):
             size_bytes = os.path.getsize(file_path)
             size_mb = size_bytes / ( 1024 * 1024 )
-            if size_mb >= threshold:
+            if size_bytes >= threshold:
                 print(f"filename : {file_path} is large file with ({size_mb:.2f}MB)")  
 
 
