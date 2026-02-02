@@ -1,0 +1,1 @@
+# how to find the cloudwatch dashboards which are not being used from more than 30 days.
