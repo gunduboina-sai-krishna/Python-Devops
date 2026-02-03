@@ -55,4 +55,4 @@ if __name__ == "__main__":
 
 
 # Shutil (standard library) - General file operations (copy, move, delete, archive, disk usage). no extra installations.
-# psutil (#rd party library) - System monitoring (CPU, memory, disk, network, processes, sensors, etc.).
+# psutil (3rd party library) - System monitoring (CPU, memory, disk, network, processes, sensors, etc.).
