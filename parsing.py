@@ -71,11 +71,12 @@ top = Counter(errors).most_common(3)
 print(top)
 
 
-#Detect Repeated Failures from Same IP
+#Detect Repeated Failures per IP
 
 import re
 from collections import Counter
 
+THRESHOLD = 5
 ips = []
 pattern = re.compile(r'(\d+\.\d+\.\d+\.\d+)')
 
@@ -86,7 +87,11 @@ with open("/Users/gunduboina.saikrishna/app.log") as f:
             if match:
                 ips.append(match.group())
 
-print(Counter(ips))                
+counts = Counter(ips) 
+
+for ip, count in counts.items():
+    if count > THRESHOLD:
+        print(f"🚨 ALERT: Possible attack from {ip} ({count} failures)")
 
 
 
